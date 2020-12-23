@@ -1,0 +1,90 @@
+
+<div *ngIf="action==='AddNewMerchant' && loading === 'none'" class="container cus-container">
+  <h2>Add Merchant</h2>
+  <form>
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter title" name="title" [(ngModel)]="local_data.title">
+      </div>
+      <div class="form-group">
+      <label for="subtitle">Subtitle:</label>
+      <input type="text" class="form-control" id="subtitle" placeholder="Enter subtitle" name="subtitle" [(ngModel)]="local_data.subtitle">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" [(ngModel)]="local_data.contactEmail">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="text" class="form-control" id="phone" placeholder="Enter phone" name="phone" [(ngModel)]="local_data.contactPhone">
+    </div>
+    <div class="form-group">
+        <label for="addressLine1">Address Line1:</label>
+        <input type="text" class="form-control" id="addressLine1" placeholder="Enter address line1" name="addressLine1" [(ngModel)]="local_data.contactAddressLine1">
+      </div>
+    <div class="form-group">
+        <label for="addressLine2">Address Line2:</label>
+        <input type="text" class="form-control" id="addressLine2" placeholder="Enter address line2" name="addressLine2" [(ngModel)]="local_data.contactAddressLine2">
+      </div>
+    <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" class="form-control" id="city" placeholder="Enter city" name="city" [(ngModel)]="local_data.contactCity">
+      </div>
+     <div class="form-group">
+        <label for="state">State:</label>
+        <input type="text" class="form-control" id="state" placeholder="Enter state" name="state" [(ngModel)]="local_data.contactState">
+      </div>
+     <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" class="form-control" id="country" placeholder="Enter country" name="country" [(ngModel)]="local_data.contactCountry">
+      </div>
+     <div class="form-group">
+        <label for="code">Postal Code:</label>
+        <input type="text" class="form-control" id="code" placeholder="Enter postal code" name="code" [(ngModel)]="local_data.contactPostalCode">
+      </div>
+     <div class="form-group">
+        <label for="shortName">Short Name:</label>
+        <input type="text" class="form-control" id="shortName" placeholder="Enter short name" name="shortName" [(ngModel)]="local_data.shortName">
+      </div>
+      <div class="form-group">
+        <label for="allowedPaymentTypes">Allowed Payment Type:</label><br/>
+        <input type="text" class="form-control" id="allowedPaymentTypes" placeholder="Enter allowed payment types" name="allowedPaymentTypes" [(ngModel)]="local_data.allowedPaymentTypes">
+    </div>
+     <div class="form-group">
+        <label for="termsAndConditions">Terms And Conditions:</label>
+        <textarea  class="form-control" id="termsAndConditions" rows="10" placeholder="Enter terms and conditions" name="termsAndConditions" [(ngModel)]="local_data.termsAndConditions"></textarea>
+     </div>
+    <button type="submit" (click)="submitMerchant()" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<div *ngIf="action==='Credentials' && loading === 'none'" class="container cus-container">
+  <h2>Credentials</h2>
+  <form>
+    <div class="form-group">
+        <label for="PwPass">PwPass:</label>
+        <input type="text" class="form-control" id="PwPass" placeholder="Enter PwPass" name="PwPass" [(ngModel)]="local_data.credentials.PwPass">
+      </div>
+    <div class="form-group">
+      <label for="PwClientId">PwClientId:</label>
+      <input type="text" class="form-control" id="PwClientId" placeholder="Enter PwClientId" name="PwClientId" [(ngModel)]="local_data.credentials.PwClientId">
+    </div>
+    <div class="form-group">
+      <label for="PwUser">PwUser:</label>
+      <input type="text" class="form-control" id="PwUser" placeholder="Enter PwUser" name="PwUser" [(ngModel)]="local_data.credentials.PwUser">
+    </div>
+    <div class="form-group">
+      <label for="PwKey">PwKey:</label>
+      <input type="text" class="form-control" id="PwKey" placeholder="Enter PwKey" name="PwKey" [(ngModel)]="local_data.credentials.PwKey">
+    </div>
+    <div class="form-group">
+        <label for="Status">Status:</label>
+        <input type="number" class="form-control" id="Status" placeholder="Enter Status" name="Status" [(ngModel)]="local_data.credentials.Status">
+    </div>
+    <button type="submit" (click)="submitCredentials()" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<div *ngIf="loading==='failure'" class="container cus-container">
+  <h2>Ooops!! Failed!!</h2>
+</div>
