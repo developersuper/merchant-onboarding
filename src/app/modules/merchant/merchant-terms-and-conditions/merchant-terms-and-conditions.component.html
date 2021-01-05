@@ -1,0 +1,11 @@
+<div>
+  <form class="merchant-tac-form">
+    <div class="form-group merchant-tac-inputs">
+      <textarea  class="form-control form-control-md" id="termsAndConditions" rows=20 placeholder="Enter Terms and Conditions" name="termsAndConditions" [(ngModel)]="termsAndConditions"></textarea>
+    </div>
+    <div class="merchant-tac-btns">
+      <button (click)="onCancel()" class="btn btn-sm btn-cancel">Cancel</button>
+      <button type="submit"  (click)="onSave()" class="btn btn-sm btn-primary">Save</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,32 @@
+.merchant-info-form {
+  margin: auto;
+  .merchant-info-input-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    .merchant-info-left-div {
+      max-width: 400px;
+      min-width: 300px;
+      padding: 0px 10px;
+      width: 100%;
+    }
+    .merchant-info-right-div {
+      max-width: 400px;
+      min-width: 300px;
+      padding: 0px 10px;
+      width: 100%;
+    }
+  }
+  .merchant-info-btns {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    button {
+      margin: 10px;
+    }
+  }
+}

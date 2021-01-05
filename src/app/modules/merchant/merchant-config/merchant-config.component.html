@@ -1,0 +1,26 @@
+<div class="merchant-config-container">
+  <form class="merchant-config-form">
+    <div class="merchant-config-wrapper">
+      <div class="form-group">
+        <label for="PwPass">PwPass:</label>
+        <input type="text" class="form-control form-control-sm" id="PwPass" placeholder="Enter PwPass" name="PwPass" [(ngModel)]="credentials.PwPass">
+        </div>
+      <div class="form-group">
+        <label for="PwClientId">PwClientId:</label>
+        <input type="text" class="form-control form-control-sm" id="PwClientId" placeholder="Enter PwClientId" name="PwClientId" [(ngModel)]="credentials.PwClientId">
+      </div>
+      <div class="form-group">
+        <label for="PwUser">PwUser:</label>
+        <input type="text" class="form-control form-control-sm" id="PwUser" placeholder="Enter PwUser" name="PwUser" [(ngModel)]="credentials.PwUser">
+      </div>
+      <div class="form-group">
+        <label for="PwKey">PwKey:</label>
+        <input type="text" class="form-control form-control-sm" id="PwKey" placeholder="Enter PwKey" name="PwKey" [(ngModel)]="credentials.PwKey">
+      </div>
+    </div>
+    <div class="merchant-config-btns">
+      <button (click)="onCancel()" class="btn btn-sm btn-cancel">Cancel</button>
+      <button type="submit" (click)="onSave()" class="btn btn-sm btn-primary">Save</button>
+    </div>
+  </form>
+</div>

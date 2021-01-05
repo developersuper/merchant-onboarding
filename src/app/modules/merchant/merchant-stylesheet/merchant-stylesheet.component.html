@@ -1,0 +1,11 @@
+<div>
+  <form class="merchant-stylesheet-form">
+    <div class="form-group merchant-stylesheet-inputs">
+      <textarea  class="form-control form-control-md" id="stylesheet" rows=20 placeholder="Enter Stylesheet" name="stylesheet" [(ngModel)]="stylesheet.File"></textarea>
+    </div>
+    <div class="merchant-stylesheet-btns">
+      <button (click)="onCancel()" class="btn btn-sm btn-cancel">Cancel</button>
+      <button type="submit"  (click)="onSave()" class="btn btn-sm btn-primary">Save</button>
+    </div>
+  </form>
+</div>

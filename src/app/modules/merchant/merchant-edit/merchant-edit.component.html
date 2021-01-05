@@ -1,0 +1,28 @@
+<div class="container mt-3">
+  <div class="merchant-edit-title">
+    <h2>Update Merchant</h2>
+    <button (click)="onBack()" class="btn btn-md btn-link">Back</button>
+  </div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" [routerLink]="toRoute('info')">Merchant Info</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" [routerLink]="toRoute('config')">Payment Config</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" [routerLink]="toRoute('logo')">Logo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" [routerLink]="toRoute('stylesheet')">Stylesheet</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" [routerLink]="toRoute('termsAndConditions')">Terms And Conditions</a>
+    </li>
+  </ul>
+  <div class="edit-paypage-form-div">
+    <router-outlet></router-outlet>
+  </div>
+</div>

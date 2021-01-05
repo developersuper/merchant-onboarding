@@ -11,6 +11,7 @@ import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
 import { AppHeaderComponent } from './layouts/app-header/app-header.component';
 import { AppFooterComponent } from './layouts/app-footer/app-footer.component';
 import { MerchantModule } from './modules/merchant/merchant.module';
+import { PageNotFoundComponent } from './layouts/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MerchantModule } from './modules/merchant/merchant.module';
     AppLayoutComponent,
     AppHeaderComponent,
     AppFooterComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

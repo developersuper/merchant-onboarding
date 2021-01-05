@@ -1,0 +1,67 @@
+<div class="container cus-container">
+  <h2>Add Merchant</h2>
+  <form class="add-paypage-form">
+    <div class="add-paypage-input-div">
+      <div class="add-paypage-left-div">
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" class="form-control form-control-sm" id="title" placeholder="Enter title" name="title" [(ngModel)]="merchant.title"/>
+        </div>
+        <div class="form-group">
+          <label for="subtitle">Subtitle:</label>
+          <input type="text" class="form-control form-control-sm" id="subtitle" placeholder="Enter subtitle" name="subtitle" [(ngModel)]="merchant.subtitle"/>
+        </div>
+        <div class="form-group">
+          <label for="shortName">Short Name:</label>
+          <input type="text" class="form-control form-control-sm" id="shortName" placeholder="Enter short name" name="shortName" [(ngModel)]="merchant.shortName"/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control form-control-sm" id="email" placeholder="Enter email" name="email" [(ngModel)]="merchant.contactEmail"/>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="text" class="form-control form-control-sm" id="phone" placeholder="Enter phone" name="phone" [(ngModel)]="merchant.contactPhone"/>
+        </div>
+        <div class="form-group">
+          <label for="allowedPaymentTypes">Allowed Payment Type:</label><br/>
+          <input type="text" class="form-control form-control-sm" id="allowedPaymentTypes" placeholder="Enter allowed payment types" name="allowedPaymentTypes" [(ngModel)]="merchant.allowedPaymentTypes"/>
+        </div>
+        <div class="form-group">
+          <label for="allowedPaymentTypes">Return URL</label><br/>
+          <input type="text" class="form-control form-control-sm" id="returnUrl" placeholder="Enter Return URL" name="returnUrl" [(ngModel)]="merchant.returnUrl"/>
+        </div>
+      </div>
+      <div class="add-paypage-right-div">
+        <div class="form-group">
+          <label for="addressLine1">Address Line1:</label>
+          <input type="text" class="form-control form-control-sm" id="addressLine1" placeholder="Enter address line1" name="addressLine1" [(ngModel)]="merchant.contactAddressLine1"/>
+        </div>
+        <div class="form-group">
+          <label for="addressLine2">Address Line2:</label>
+          <input type="text" class="form-control form-control-sm" id="addressLine2" placeholder="Enter address line2" name="addressLine2" [(ngModel)]="merchant.contactAddressLine2"/>
+        </div>
+        <div class="form-group">
+          <label for="city">City:</label>
+          <input type="text" class="form-control form-control-sm" id="city" placeholder="Enter city" name="city" [(ngModel)]="merchant.contactCity"/>
+        </div>
+        <div class="form-group">
+          <label for="state">State:</label>
+          <input type="text" class="form-control form-control-sm" id="state" placeholder="Enter state" name="state" [(ngModel)]="merchant.contactState"/>
+        </div>
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <input type="text" class="form-control form-control-sm" id="country" placeholder="Enter country" name="country" [(ngModel)]="merchant.contactCountry"/>
+          </div>
+        <div class="form-group">
+          <label for="code">Postal Code:</label>
+          <input type="text" class="form-control form-control-sm" id="code" placeholder="Enter postal code" name="code" [(ngModel)]="merchant.contactPostalCode"/>
+        </div>
+        <div class="add-paypage-btns">
+          <button (click)="onCancel()" class="btn btn-sm btn-cancel">Cancel</button>
+          <button (click)="onSave()" type="submit" class="btn btn-sm btn-primary">Create Paypage</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

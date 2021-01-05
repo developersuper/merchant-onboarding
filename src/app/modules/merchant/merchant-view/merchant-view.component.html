@@ -1,0 +1,92 @@
+<div class="merchant-view-top-wrapper">
+  <button mat-button mat-flat-button (click)="addNewMerchant()" color="primary" class="add-merchant-btn"> Add Merchant </button>
+  <form class="form-inline">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <input class="form-control form-control-sm ml-3 w-75" type="text" (keyup)="doFilter($event)" placeholder="Search"
+      aria-label="Search">
+  </form>
+</div>
+<div class="mat-elevation-z8 merchant-table-wrapper">
+  <div class="table-wrapper">
+    <table mat-table matSort [dataSource]="dataSource">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let element" style="padding-left: 24px;"> {{ element.id }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+        <td mat-cell *matCellDef="let element"> {{ element.title }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="subtitle">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Subtitle </th>
+        <td mat-cell *matCellDef="let element"> {{ element.subtitle }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="contactEmail">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+        <td mat-cell *matCellDef="let element"> {{ element.contactEmail }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="contactPhone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone </th>
+        <td mat-cell *matCellDef="let element"> {{ element.contactPhone }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="contactAddressLine1">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> AddressLine1 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.contactAddressLine1 }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="contactAddressLine2">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> AddressLine2 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.contactAddressLine2 }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="contactCity">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+        <td mat-cell *matCellDef="let element"> {{ element.contactCity }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="contactState">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> State </th>
+        <td mat-cell *matCellDef="let element"> {{ element.contactState }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="contactCountry">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Country </th>
+        <td mat-cell *matCellDef="let element"> {{ element.contactCountry }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="contactPostalCode">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> PostalCode </th>
+        <td mat-cell *matCellDef="let element"> {{ element.contactPostalCode }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="shortName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ShortName </th>
+        <td mat-cell *matCellDef="let element"> {{ element.shortName }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="termsAndConditions">
+        <th mat-header-cell *matHeaderCellDef class="terms-and-conditions"> TermsAndConditions </th>
+        <td mat-cell *matCellDef="let element" class="terms-and-conditions"> <abbr [title]="element.termsAndConditions">{{ element.termsAndConditions }} </abbr></td>
+      </ng-container>
+
+      <!-- Action Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element"> 
+          <button mat-button mat-flat-button (click)="onEdit(element)" class="merchant-action-btn"> Edit </button> 
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns;"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

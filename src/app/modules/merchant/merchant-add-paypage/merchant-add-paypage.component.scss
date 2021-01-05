@@ -1,0 +1,27 @@
+.add-paypage-form {
+  margin: auto;
+  .add-paypage-input-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    .add-paypage-left-div {
+      max-width: 400px;
+      width: 100%;
+    }
+    .add-paypage-right-div {
+      max-width: 400px;
+      width: 100%;
+      .add-paypage-btns {
+        margin-top: 50px;
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        button {
+          margin: 10px;
+        }
+      }
+    }
+  }
+}

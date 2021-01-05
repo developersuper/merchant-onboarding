@@ -13,6 +13,7 @@ export interface IMerchant {
   shortName: string,
   allowedPaymentTypes: Array<string>,
   termsAndConditions: string,
+  returnUrl: string,
 }
 
 export interface ICredentials {
@@ -20,5 +21,9 @@ export interface ICredentials {
   PwClientId: string,
   PwUser: string,
   PwKey: string,
-  Status: number
+}
+
+export interface IStylesheet {
+  File: string,
+  Status: string,
 }

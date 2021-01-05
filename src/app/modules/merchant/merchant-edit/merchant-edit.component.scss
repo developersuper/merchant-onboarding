@@ -1,0 +1,19 @@
+.merchant-edit-title {
+  display: flex;
+  justify-content: space-between;
+  button {
+    outline: none;
+  }
+  button:hover {
+    opacity: 0.7;
+  }
+}
+.edit-paypage-form-div {
+  padding-top: 30px;
+}
+.nav-tabs a {
+  color: #2f69b3;
+}
+.nav-tabs a:active {
+  color: #333333;
+}
